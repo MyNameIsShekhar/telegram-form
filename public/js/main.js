@@ -1,6 +1,5 @@
-const TOKEN = process.env.TOKEN;
-const CHAT_ID = process.env.CHAT_ID;
-const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+const URI_API = `https://api.telegram.org/6324057598:AAGQL9l3OEqelotYD-9IshMa3H3JGx4_MMA/sendMessage`;
 
 document.querySelector("#tg").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -14,7 +13,7 @@ document.querySelector("#tg").addEventListener("submit", function(e) {
     document.querySelector("#error").style.display = 'block';
   } else {
     axios.post(URI_API, {
-      chat_id: CHAT_ID,
+      chat_id: '6765826972',
       parse_mode: 'html',
       text: message
     })
